@@ -1,0 +1,25 @@
+{
+  "name": "bfhl-challenge",
+  "version": "1.0.0",
+  "description": "Chitkara Full Stack Engineering Challenge REST API and Frontend",
+  "main": "server.js",
+  "scripts": {
+    "build": "npm run build --prefix frontend",
+    "start": "npm run build && node server.js",
+    "dev:backend": "node --watch server.js",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\""
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^10.0.3"
+  }
+}
